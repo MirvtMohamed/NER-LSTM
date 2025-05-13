@@ -32,8 +32,17 @@ This project uses the Arabic NER dataset from SinaLab:
 - TimeDistributed Dense layer for token classification
 
 ## Results
-- Test accuracy: [Add your final test accuracy]
-- ROC-AUC scores for entity classes: [Add summary of ROC-AUC scores]
+- Test accuracy: 95%
+- #### High-Performing Entity Classes (AUC ≥ 0.98):
+- Perfect classification (AUC = 1.00): I-ORDINAL, I-DATE, I-PERS, I-GPE, B-OCC, B-PERS, B-GPE, B-ORDINAL, B-DATE, I-MONEY, I-WEBSITE, I-CARDINAL
+- Near-perfect classification (AUC ≥ 0.98): I-FAC (0.99), I-ORG (0.98), I-LOC (0.99), B-FAC (0.99), B-WEBSITE (0.98), B-ORG (0.99), B-CARDINAL (0.98), I-OCC (0.99)
+
+#### Good-Performing Entity Classes (0.90 ≤ AUC < 0.98):
+- I-EVENT (0.93), I-NORP (0.97), B-LANGUAGE (0.95), B-NORP (0.97), B-EVENT (0.95), B-LAW (0.95), B-LOC (0.97), B-TIME (0.92)
+
+#### Lower-Performing Entity Classes (AUC < 0.90):
+- B-MONEY (0.80), B-PRODUCT (0.79), I-TIME (0.85), I-PRODUCT (0.84)
+
 
 ## How to Run
 1. Clone the repository
